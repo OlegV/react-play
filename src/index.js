@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
+import { Provider } from 'react-redux'
 
-ReactDOM.render(<App />, document.getElementById('app'));
+import App from './components/App.jsx';
+import store from './store';
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app')
+);
+
 console.log('start');
 
 module.hot.accept();
