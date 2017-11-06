@@ -26,6 +26,7 @@ module.exports = {
     ]
   },
   plugins: [HtmlWebpackPluginConfig],
+  devtool : "inline-source-map",
   devServer: {
     contentBase: './build',
     hot: true
